@@ -66,8 +66,7 @@ end
 
 function cost = get_cost(theta_out, theta_mid, t, X)
   [~, ~, ~, a_out] = forward_prop(theta_out, theta_mid, X);
-  m = size(t, 1);
-  cost = - 1/m * (t' * log(a_out) + (1 - t)' * log(1 - a_out));
+  cost = 0.5 * (t - a_out)' * (t - a_out);
 end
 
 function count = get_error_count(theta_out, theta_mid, t, X)
@@ -80,12 +79,12 @@ function [grad_out, grad_mid] = get_grad(theta_out, theta_mid, t, X)
   grad_mid = zeros(size(theta_mid));
 
   [~, ~, a_mid, a_out] = forward_prop(theta_out, theta_mid, X);
-  delta_out = a_out - t;
+  delta_out = (t - a_out) .* a_out .* (1 - a_out);
   delta_mid = delta_out * theta_out(4) .* a_mid(:, 4) .* (1 - a_mid(:, 4));
 
   for i=1:4
-    grad_mid = grad_mid + 1 / 4 * X(i, :)' * delta_mid(i);
-    grad_out = grad_out + 1 / 4 * a_mid(i, :)' * delta_out(i);
+    grad_mid = grad_mid - X(i, :)' * delta_mid(i);
+    grad_out = grad_out - a_mid(i, :)' * delta_out(i);
   end
 end
 
