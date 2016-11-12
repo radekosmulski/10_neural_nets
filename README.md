@@ -10,3 +10,10 @@ An implementation of 10 simple neural networks in Matlab. The implementations do
     Learning Objectives:
     * getting my feet wet with Matlab
     * generalizing the delta rule to training of neurons connecting to both the output neuron and the single intermittent, hidden neuron
+
+2. Parity_network_with_one_hidden_layer.m
+
+    A network outlined in the paper by Rumelhart, Hinton and Williams mentioned above. It outputs a 1 if the input pattern consisting of 4 binary digits contains an odd number of 1s and 0 otherwise.
+
+    Learning Objectives:
+    * to keep practicing implementing neural networks
