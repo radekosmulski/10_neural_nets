@@ -17,3 +17,11 @@ An implementation of 10 simple neural networks in Matlab. The implementations do
 
     Learning Objectives:
     * to keep practicing implementing neural networks
+
+3. Simple_softmax.m
+
+    A very simple neural network for classification of input patterns into 3 categories with a softmax ouput layer.
+
+    Learning Objectives:
+    * learn to implement a softmax group
+
