@@ -1,7 +1,7 @@
 10 Neural Networks
 ------------------
 
-An implementation of 10 simple neural networks in Matlab. The implementations don't have to necessarily be particularly elegant nor efficient - the goal is to ensure I continue to practice.
+An implementation of 10 simple neural networks in Matlab and Python. The implementations don't have to necessarily be particularly elegant nor efficient - the goal is to ensure I continue to practice.
 
 1. XOR_network_with_one_hidden_unit.m
 
@@ -36,3 +36,12 @@ An implementation of 10 simple neural networks in Matlab. The implementations do
     * minimize a cost function with a complex error surface
     * understand why and how the acceleration / momentum method works
     * practice implementing a more complex neural network
+
+5. count_ones_RNN.py
+
+    A toy RNN for counting the number of times one appears in a list containing zeros and ones.
+
+    I implemented this neural network based on a great tutorial by Peter Roelants that can be found [here](http://peterroelants.github.io/posts/rnn_implementation_part01/).
+
+    Learning Objectives:
+    * learn about and experiment with recurrent neural networks
