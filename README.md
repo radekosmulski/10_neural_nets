@@ -45,3 +45,11 @@ An implementation of 10 simple neural networks in Matlab and Python. The impleme
 
     Learning Objectives:
     * learn about and experiment with recurrent neural networks
+
+6. digit_recognition.py
+
+    A very simple take on digit recognition using the MNIST dataset. The network features a single hidden layer with variable number of hidden units feeding into a softmax output layer. The NN makes it very easy to experiment with parameters such as the learning_rate or batch_size. With 200 hidden units it consistently achieves a classification error of under 2.5% on the test set.
+
+    Learning Ojbectives:
+    * practice implementing a neural network with a non-trivial softmax group
+    * experiment with the MNIST dataset in preperation of implementing a convolutional NN
