@@ -1,7 +1,7 @@
 10 Neural Networks
 ------------------
 
-An implementation of 10 simple neural networks in Matlab and Python. The implementations don't have to necessarily be particularly elegant nor efficient - the goal is to ensure I continue to practice.
+An implementation of 10 simple neural networks in Matlab and Python. Each script can be executed - it will perform learning and will output diagnostic information. The implementations don't have to necessarily be particularly elegant nor efficient - the goal is to ensure I continue to practice.
 
 1. XOR_network_with_one_hidden_unit.m
 
@@ -53,3 +53,10 @@ An implementation of 10 simple neural networks in Matlab and Python. The impleme
     Learning Ojbectives:
     * practice implementing a neural network with a non-trivial softmax group
     * experiment with the MNIST dataset in preperation of implementing a convolutional NN
+
+7. binary_addition_RNN.py
+
+    A slightly more complex RNN for performing binary addition. The network learns both the 3 set of weights and the initial state.
+
+    Learning Objective:
+    * practice implementing RNNs
