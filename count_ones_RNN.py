@@ -45,13 +45,10 @@ class RNN:
             example = self.generate_example()
         X, target = example
         output = self.forward_states(X)[-1]
-        print('###############################################################')
         print('Example:', X)
         print('Expected output:',target)
-        print('Our output:', output)
-        print('cost:', self.cost(target, output), 'initial_state:', self.initial_state)
-        print('wRec:', self.wRec, 'wx:', self.wx)
-        print('###############################################################')
+        print('Our output:', output, 'cost:', self.cost(target, output))
+        print('---------------------')
 
     def gradient(self, example):
         X, target = example
@@ -106,8 +103,27 @@ class RNN:
 
         return (partial_wRec, partial_wx, partial_init_state)
 
+
 rnn = RNN()
-e = rnn.generate_example()
-rnn.run_example(e)
+print('Randomly initializing weights and the initial state:', \
+'wRec:', rnn.wRec, 'wx:', rnn.wx, 'initial_state:', rnn.initial_state, '\n')
+print('Generating 3 examples and running them before training.')
+e1 = rnn.generate_example()
+e2 = rnn.generate_example()
+e3 = rnn.generate_example()
+rnn.run_example(e1)
+rnn.run_example(e2)
+rnn.run_example(e3)
+
+print('\n\nTraining on 1000 randomly generated examples.\n\n')
 rnn.train(1000)
-rnn.run_example(e)
+print('Weights and initial_state after training:', \
+'wRec:', rnn.wRec, 'wx:', rnn.wx, 'initial_state:', rnn.initial_state, '\n')
+
+print('Running the same examples we ran earlier, this time after training.')
+e1 = rnn.generate_example()
+e2 = rnn.generate_example()
+e3 = rnn.generate_example()
+rnn.run_example(e1)
+rnn.run_example(e2)
+rnn.run_example(e3)
