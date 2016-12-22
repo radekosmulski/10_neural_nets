@@ -103,7 +103,6 @@ class RNN:
 
         return (partial_wRec, partial_wx, partial_init_state)
 
-
 rnn = RNN()
 print('Randomly initializing weights and the initial state:', \
 'wRec:', rnn.wRec, 'wx:', rnn.wx, 'initial_state:', rnn.initial_state, '\n')
