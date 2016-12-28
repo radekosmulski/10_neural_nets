@@ -60,7 +60,7 @@ I worked on these neural networks while part taking in a [Neural Networks for Ma
 
     A slightly more complex RNN for performing binary addition. The network learns both the 3 set of weights and the initial state.
 
-    Learning Objective:
+    Learning Objectives:
     * practice implementing RNNs
 
 8. mixture_of_experts.py
@@ -72,6 +72,16 @@ I worked on these neural networks while part taking in a [Neural Networks for Ma
     Learning Objectives:
     * practice implementing a model combining multiple NNs
     * understand the mathematics behind the gating network and how error derivatives are propagated to the experts
+
+9. conv_net.py
+
+    A small convolutional neural network using the MNIST dataset. It features a convolutional layer and a max-pooling layer feeding directly into a softmax. There have been numerous sources I used to implement this CNN, including:
+    * [Lecun et al. 1998](http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf)
+    * notes for the Stanford CS class [CS231n: Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
+    * [A Beginner's Guide To Understanding Convolutional Neural Networks](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)
+
+    Learning Objectives:
+    * figure out how the error is backpropagated in a NN featuring convolutional and pooling layers
 
 10. boltzmann.py
 
