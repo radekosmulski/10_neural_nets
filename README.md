@@ -60,3 +60,13 @@ An implementation of 10 simple neural networks in Matlab and Python. Each script
 
     Learning Objective:
     * practice implementing RNNs
+
+10. boltzmann.py
+
+    A joint Restricted Boltzmann Machine (RBM) trained on the MNIST dataset using Persistent Contrastive Divergence with momentum. After training, in order to predict class membership of an example, the example is presented to the RBM along with each possible label. The free energy of each example - label pair is evaluated and the label of a combination with lowest free energy is picked as the most likely class.
+
+    I implemented this RBM based on information contained in [Training Restricted Boltzmann Machines using Approximations to the Likelihood Gradient](http://www.cs.toronto.edu/~tijmen/pcd/pcd.pdf) by Tijmen Tieleman and [A practical guide to training restricted Boltzmann machines](http://www.cs.toronto.edu/~hinton/absps/guideTR.pdf) by Geoffrey Hinton.
+
+    Learning Objectives:
+    * practice implementing a Restricted Boltzmann Machine
+    * gain hands on experience with the Persistent Contrastive Divergence algorithm
