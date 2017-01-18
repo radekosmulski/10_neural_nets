@@ -3,6 +3,8 @@
 
 An implementation of 10 simple neural networks in Matlab and Python. Each script can be executed - it will perform learning and will output diagnostic information. The implementations don't have to necessarily be particularly elegant nor efficient - the goal is to ensure I continue to practice.
 
+I worked on these neural networks while part taking in a [Neural Networks for Machine Learning MOOC](https://www.coursera.org/learn/neural-networks) taught by Professor Geoffrey Hinton. This is an outstanding course. The implementations are based on teachings by Professor Hinton and further readings that I reference.
+
 1. XOR_network_with_one_hidden_unit.m
 
     A network with a hidden unit as described in [Parallel distributed models of schemata and sequential thought processes.](http://www.cs.toronto.edu/~hinton/absps/pdp8.pdf) by Rumelhart, D. E., Hinton, G. E., and Williams, R. J.  (figure 2).
@@ -60,6 +62,16 @@ An implementation of 10 simple neural networks in Matlab and Python. Each script
 
     Learning Objective:
     * practice implementing RNNs
+
+8. mixture_of_experts.py
+
+  A mixture of experts trained on the MNIST dataset. Each expert is a simple fully connected NN with one hidden layer consisting of 25 hidden units and an output layer consisting of 10 neurons. A gating network is trained to discern what mixture of experts should be utilized to produce output on a given example. Experts receive training signal in proportion to the belief of the gating network of their applicability to a given example (this promotes specialization).
+
+    I implemented this mixture of experts based on [Adaptive Mixture of Local Experts](http://www.cs.toronto.edu/~fritz/absps/jjnh91.pdf) by Jacobs, Jordan, Nowlan and Hinton.
+
+    Learning Objectives:
+    * practice implementing a model combining multiple NNs
+    * understand the mathematics behind the gating network and how error derivatives are propagated to the experts
 
 10. boltzmann.py
 
